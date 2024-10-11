@@ -568,15 +568,20 @@ p {
 .icon-link-footer:focus {
   background-color: #31d0aa;
 }
+.modal-backdrop.is-open {
+  display: block;
+  opacity: 1;
+}
 
 .modal-backdrop {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+
   align-items: center;
   justify-content: center;
   z-index: 1000;
