@@ -239,71 +239,77 @@ p {
   background-repeat: no-repeat;
   background-image: url(../images/icons.svg);
 }
+.icon-send {
+  width: 77px;
+  height: 64px;
+  background-position: 0 0;
+}
 .icon-done {
   width: 80px;
   height: 64px;
-  background-position: 0 0;
+  background-position: -160px 0;
 }
 .icon-phone {
   width: 64px;
   height: 64px;
-  background-position: -160px 0;
+  background-position: -320px 0;
 }
 .icon-email {
   width: 85px;
   height: 64px;
-  background-position: -240px 0;
+  background-position: -400px 0;
 }
 .icon-close {
   width: 64px;
   height: 64px;
-  background-position: -400px 0;
+  background-position: -560px 0;
 }
 .icon-name {
   width: 64px;
   height: 64px;
-  background-position: -480px 0;
+  background-position: -640px 0;
 }
 .icon-antenna {
   width: 64px;
   height: 64px;
-  background-position: -560px 0;
+  background-position: -720px 0;
 }
 .icon-astronaut {
   width: 64px;
   height: 64px;
-  background-position: -640px 0;
+  background-position: -800px 0;
 }
 .icon-clock {
   width: 64px;
   height: 64px;
-  background-position: -720px 0;
+  background-position: -880px 0;
 }
 .icon-diagram {
   width: 64px;
   height: 64px;
-  background-position: -800px 0;
+  background-position: -960px 0;
 }
 .icon-facebook {
   width: 64px;
   height: 64px;
-  background-position: -880px 0;
+  background-position: -1040px 0;
 }
 .icon-instagram {
   width: 64px;
   height: 64px;
-  background-position: -960px 0;
+  background-position: -1120px 0;
 }
 .icon-linkedin {
   width: 64px;
   height: 64px;
-  background-position: -1040px 0;
+  background-position: -1200px 0;
 }
 .icon-twitter {
   width: 64px;
   height: 64px;
-  background-position: -1120px 0;
+  background-position: 0 -80px;
 }
+
 
 .section-three-icon {
   margin-top: 8px;
@@ -568,31 +574,103 @@ p {
 .icon-link-footer:focus {
   background-color: #31d0aa;
 }
+
+
+
+
+
+
+
+
+
+
+
+.subscribe-form{
+  display: flex; 
+  gap: 24px;
+}
+
+
+.subscribe-email{
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff; 
+  background-color: transparent; 
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+  border-radius: 4px;
+  color: #ffffff; 
+}
+.subscribe-email::placeholder {
+  color: #ffffff;
+}
+.subscribe-btn{
+   display: flex; 
+  justify-content: center; 
+  border: none;
+  align-items: center; 
+  font-family: "Roboto", sans-serif;
+  min-width: 165px; 
+  height: 40px;
+  font-size: 16px;         
+  font-weight: 500;       
+  line-height: 1.5;          
+  letter-spacing: 0.04em;    
+  color: #ffffff;           
+  cursor: pointer;           
+  background-color: #4D5AE5; 
+  border: none;             
+  border-radius: 4px; 
+
+
+}
+.container-three{
+margin-left: 80px;
+}
+.subscribe-btn-svg{
+margin-left: 16px; 
+fill: #fff;
+}
+
+
+
+
 .modal-backdrop.is-open {
   display: block;
   opacity: 1;
 }
 
 .modal-backdrop {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  align-items: center;
+  position: fixed; 
+  top: 0;        
+  left: 0;        
+  width: 100%;    
+  height: 100%;    
+  background-color: rgba(46, 47, 66, 0.4); 
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  display: flex;
   justify-content: center;
-  z-index: 1000;
+  align-items: center;
+  opacity: 0;
+
 }
 
 .modal-window {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
   width: 408px;
+  min-height: 584px; 
   padding: 72px 24px 24px 24px;
-  background: white;
-  border-radius: 8px;
-  position: relative;
+  background: #fcfcfc;
+  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
+  border-radius: 4px;
+ position: absolute;
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .form-title {
@@ -605,13 +683,14 @@ p {
   color: #2e2f42;
 }
 
-.contact-form label {
+.label-contact-form-user  {
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
+  margin-bottom: 4px;
 }
 
 .input-container {
@@ -633,12 +712,22 @@ p {
   fill: #4d5ae5;
 }
 
-.close-modal-btn svg {
+.close-modal-svg {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal-btn:hover svg {
   fill: #fff;
 }
+.close-modal-btn:focus svg {
+  fill: #fff;
+}
+.label-contact-form{
+  margin-bottom: 8px;
+
+}
+
+
 .contact-form input[type="text"],
 .contact-form input[type="tel"],
 .contact-form input[type="email"] {
@@ -718,26 +807,31 @@ p {
   display: flex;
 }
 .close-modal-btn {
+  position: absolute; 
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  top: 10px;
-  border: none;
-  right: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1); 
   fill: #e7e9fc;
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  padding: 0; 
+
 }
 
 .close-modal-btn:hover {
+  background-color: #404bbf; 
+  border: none;
+}
+.close-modal-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 .form-link {
   line-height: 133%;
