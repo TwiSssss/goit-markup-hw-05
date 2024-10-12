@@ -519,7 +519,7 @@
                  
                 type="text"
                 id="user-name"
-                name="username"
+                name="user-name"
                 placeholder=""
                 required
               />
@@ -531,7 +531,7 @@
         </div>
            
             <div class="label-contact-form">
-            <label for="phone">Phone</label>
+            <label class="label-contact-form-user" for="phone">Phone</label>
             <div class="input-container">
                 <input
                 type="tel"
@@ -548,7 +548,7 @@
       
             
             <div class="label-contact-form">
-            <label for="email">Email</label>
+            <label class="label-contact-form-user" for="email">Email</label>
             <div class="input-container">
                 <input type="email" id="email" name="email" placeholder="" />
                 <svg class="input-icon" width="18" height="24">
@@ -558,12 +558,13 @@
               </div></div>
          
             <div class="label-contact-form">
-            <label for="user-comment">Comment</label></div>
+            <label for="user-comment">Comment</label>
             <textarea
-              id="user-comment"
-              name="comment"
-              placeholder="Text input"
-            ></textarea>
+            id="user-comment"
+            name="comment"
+            placeholder="Text input"
+          ></textarea></div>
+     
 
             <div class="checkbox">
               <input type="checkbox" value="true" id="user-privacy" required />
